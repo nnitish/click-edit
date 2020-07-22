@@ -1,4 +1,81 @@
-# ContentEdit
+# click-edit
+
+Let's user click on text to edit the contents only if there is a difference and thus reduce the number of unnecessary API calls.
+
+# Installation
+
+## npm
+```js
+npm install click-edit --save
+```
+
+# Usage
+
+## Import `ClickEditModule`
+
+You need to Import and add the `ClickEditModule` in the module of your app where you want to use it.
+
+```js
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { ClickEditModule} from 'click-edit';
+
+// ..
+
+@NgModule({
+  // ..
+
+  imports: [
+    BrowserModule,
+    ClickEditModule
+  ],
+
+  // ...
+})
+```
+
+## Uses in component's view
+Add the `clickEdit` directive to the element.
+
+```js
+<p clickEdit (onContentChange)="onChange($event)">
+    Some text which will be edited.
+</p>
+```
+
+## API
+
+### Attributes
+
+| Attribute      | Type      | Default   | Description                                                                                                                    |
+| -------------- | --------- | --------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `canEdit`      | `boolean` | `true`    | Whether the text should be editable or not.                                                                                    |
+| `multiline`    | `boolean` | `false`   | Whether pressing enter key should create a newline                                                                             |
+|                |           |           | `true`: Enter key will not emit edited value (It will be emitted on blur).                                                   |                               |
+| `contentId`    | `number`  |           | Whether need to reference the identifier of the change.                                                                        |
+| `contentLabel` | `string`  |           | Whether need to indicate what field is being changed.                                                                          |
+| `contentClass` | `string`  | `editing` | Style the element during editing using this class.                                                                              |
+
+
+
+### Events
+
+You can listen in on when the text field contents have changed.
+
+| Event             | Type         | Description                                                                                                                    |
+| ----------------- | -------------| ------------------------------------------------------------------------------------------------------------------------------ |
+| `onContentChange` | `customEvent`| Fired only when the content has been successfully changed to a new value.                                                      |
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<br/>
+<br/>
+<br/>
+<br/>
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 

@@ -1,15 +1,43 @@
 {
-  "name": "content-edit",
-  "version": "0.0.0",
+  "name": "click-edit",
+  "description": "In Angular application, Lets user click on text to edit the contents",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nnitish/ng-connection"
+  },
+  "author": {
+    "name": "Nitish Kumar",
+    "email": "nnitish.94@gmail.com"
+  },
+  "private": false,
+  "keywords": [
+    "Angular",
+    "ng",
+    "make content editable in angular",
+    "edit content in angular",
+    "content editable direcive",
+    "content editable",
+    "content editable element",
+    "editable input element",
+    "editable element",
+    "editable textfield direcive",
+    "inline edit direcive",
+    "inline edit",
+    "inline",
+    "editable",
+    "edit text field"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "packagr": "ng-packagr -p ng-package.json",
+    "release": "standard-version"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.13",
     "@angular/common": "~8.2.13",
@@ -28,9 +56,9 @@
     "@angular/cli": "~8.3.17",
     "@angular/compiler-cli": "~8.2.13",
     "@angular/language-service": "~8.2.13",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -39,6 +67,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "ng-packagr": "^10.0.2",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
